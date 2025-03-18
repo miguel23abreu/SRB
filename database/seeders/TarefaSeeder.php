@@ -21,7 +21,7 @@ class TarefaSeeder extends Seeder
                 'dificuldade' => 3,
                 'prioridade' => 'Alta',
                 'prazo' => '2025-03-30',
-                'status' => 'To Do',
+                'status' => 'A Fazer',
                 'revisao' => true,
             ],
             [
@@ -31,7 +31,7 @@ class TarefaSeeder extends Seeder
                 'dificuldade' => 2,
                 'prioridade' => 'Média',
                 'prazo' => '2025-03-25',
-                'status' => 'To Do',
+                'status' => 'A Fazer',
                 'revisao' => false,
             ],
             [
@@ -41,8 +41,8 @@ class TarefaSeeder extends Seeder
                 'dificuldade' => 1,
                 'prioridade' => 'Baixa',
                 'prazo' => '2025-03-20',
-                'status' => 'Done',
-                'revisao' => false,
+                'status' => 'Terminada',
+                'revisao' => true,
             ],
             [
                 'tarefa' => 'Implementação de API',
@@ -51,7 +51,7 @@ class TarefaSeeder extends Seeder
                 'dificuldade' => 4,
                 'prioridade' => 'Alta',
                 'prazo' => '2025-04-10',
-                'status' => 'To Do',
+                'status' => 'A Fazer',
                 'revisao' => true,
             ],
             [
@@ -61,7 +61,7 @@ class TarefaSeeder extends Seeder
                 'dificuldade' => 3,
                 'prioridade' => 'Média',
                 'prazo' => '2025-03-28',
-                'status' => 'Done',
+                'status' => 'Em Progresso',
                 'revisao' => true,
             ]
         ]);
