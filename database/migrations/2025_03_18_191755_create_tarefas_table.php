@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('tarefas', function (Blueprint $table) {
             $table->id();
-            $table->string('nome_tarefa');
+            $table->string('tarefa');
             $table->text('descricao')->nullable();
             $table->integer('ciclos');
             $table->integer('dificuldade')->check('dificuldade >= 1 AND dificuldade <= 5');
-            $table->enum('prioridade', ['Baixa', 'Média', 'Alta']);
+            $table->enum('prioridade', ['baixa', 'media', 'alta']);
             $table->date('prazo');
-            $table->enum('quadro', ['To Do', 'Done']);
+            $table->enum('status', ['A Fazer', 'Em Progresso', 'Terminada'])->default('A Fazer');
             $table->boolean('revisao');
             $table->timestamps();
         });
