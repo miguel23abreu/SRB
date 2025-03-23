@@ -7,7 +7,7 @@
 
     <title>To-do List</title>
     <!-- Styles / Scripts -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
@@ -18,6 +18,8 @@
             {{$slot}}
         </div>
     </main>
+    @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>
