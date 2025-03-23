@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body class="bg-white dark:bg-gray-800">
     <main class="flex w-full h-full">
         <div class="flex w-full relative z-10 mt-5 ml-5 mr-5 opacity-90">
             {{$slot}}
