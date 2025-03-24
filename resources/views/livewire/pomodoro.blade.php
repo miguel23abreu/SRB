@@ -33,7 +33,7 @@
                 <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none" wire:click="startShortBreakTimer">Iniciar</button>
             </div>
         </div>
-        <div class="hidden p-4 bg-white rounded-lg dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
             <div class="flex flex-col items-center justify-center">
                 <h2 class="mb-4 text-2xl font-extrabold text-gray-900 dark:text-white">Pausa Longa</h2>
                 <div class="text-4xl font-bold text-gray-900 dark:text-white" id="long-break-timer">00:15:00</div>
