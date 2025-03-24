@@ -21,4 +21,8 @@ class Tarefa extends Model
         'status',
         'revisao',
     ];
+
+    protected $casts = [
+        'prazo' => 'datetime',
+    ];
 }

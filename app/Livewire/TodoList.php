@@ -6,7 +6,6 @@ use App\Models\Tarefa;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-#[Layout('app')]
 class TodoList extends Component
 {
     public $todos;

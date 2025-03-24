@@ -6,19 +6,43 @@ use Livewire\Component;
 
 class Pomodoro extends Component
 {
-    public function startFocusTimer()
+
+    public $tempos = [
+        'focus' => [
+            'hours' => 0,
+            'minutes' => 25,
+            'seconds' => 0,
+        ],
+        'short_break' => [
+            'hours' => 0,
+            'minutes' => 5,
+            'seconds' => 0,
+        ],
+        'long_break' => [
+            'hours' => 0,
+            'minutes' => 15,
+            'seconds' => 0,
+        ]
+    ];
+
+    public function mount()
     {
-        $this->dispatchBrowserEvent('startFocusTimer');
+
+    }
+
+    public function startFocus()
+    {
+        $this->dispatch('startFocusTimer');
     }
 
     public function startShortBreakTimer()
     {
-        $this->dispatchBrowserEvent('startShortBreakTimer');
+        $this->dispatch('startShortBreakTimer');
     }
 
     public function startLongBreakTimer()
     {
-        $this->dispatchBrowserEvent('startLongBreakTimer');
+        $this->dispatch('startLongBreakTimer');
     }
 
     public function render()

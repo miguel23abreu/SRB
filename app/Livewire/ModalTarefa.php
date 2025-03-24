@@ -29,6 +29,12 @@ class ModalTarefa extends Component
         $this->showModal = true;
     }
 
+    public function hide()
+    {
+        $this->reset(); // Limpa os campos
+        $this->showModal = false;
+    }
+
     public function save()
     {
         $this->validate();

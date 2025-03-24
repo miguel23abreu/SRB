@@ -4,7 +4,7 @@ use App\Http\Controllers\TarefaController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\TodoList;
 
-Route::get('/', TodoList::class)->name('home');
+Route::get('/', function(){ return view('dashboard');})->name('home');
 
 Route::get('/tarefas', [TarefaController::class, 'index']);
 Route::post('/tarefas', [TarefaController::class, 'store']);
