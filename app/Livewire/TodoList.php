@@ -2,7 +2,7 @@
 
 namespace App\Livewire;
 
-use App\Models\Todo;
+use App\Models\Tarefa;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
@@ -10,7 +10,6 @@ use Livewire\Component;
 class TodoList extends Component
 {
     public $todos;
-    public $tarefa = '';
 
     function mount()
     {
@@ -19,19 +18,12 @@ class TodoList extends Component
 
     function fetchTodos()
     {
-        $this->todos = Todo::all()->reverse();
+        $this->todos = Tarefa::all()->reverse();
     }
 
-    function addTarefa()
-    {
-        if($this->tarefa != ''){
-            $todo = new Todo();
-            $todo->tarefa = $this->tarefa;
-            $todo->save();
-            $this->tarefa = '';
-            $this->fetchTodos();
-        }
-    }
+    protected $listeners = ['tarefaCriada' => 'fetchTodos'];
+
+
     public function render()
     {
         return view('livewire.todo-list');

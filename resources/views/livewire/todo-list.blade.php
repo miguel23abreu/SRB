@@ -2,6 +2,14 @@
     <!-- Componente Pomodoro -->
     <livewire:pomodoro />
 
+    <!-- Botão para abrir o modal -->
+    <button wire:click="$dispatch('showModal')" class="px-4 py-2 bg-blue-500 text-white rounded">
+        Nova Tarefa
+    </button>
+
+    <!-- Chama o componente do modal -->
+    <livewire:modal-tarefa />
+
     <!-- Seção "A Fazer" -->
     <div class="w-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
         <div class="flex bg-blue-200 h-10 rounded-t-lg items-center">
