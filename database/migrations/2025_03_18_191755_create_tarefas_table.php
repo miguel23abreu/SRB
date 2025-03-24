@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('tarefa');
             $table->text('descricao')->nullable();
             $table->integer('ciclos');
+            $table->integer('ciclos_completos')->default(0);
             $table->integer('dificuldade')->check('dificuldade >= 1 AND dificuldade <= 5');
             $table->enum('prioridade', ['baixa', 'media', 'alta']);
             $table->date('prazo');

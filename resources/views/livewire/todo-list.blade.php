@@ -16,23 +16,23 @@
                     <div
                         class="flex-col items-center justify-center h-full w-full max-w-md p-6 bg-red-800 border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-red-500 dark:border-gray-600">
                         <!-- Título da Tarefa -->
-                        <div class="text-center text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                        <div class="text-center text-xl font-semibold text-white dark:text-white mb-2">
                             {{ $card->tarefa }}
                         </div>
 
                         <!-- Descrição -->
-                        <div class="text-center text-gray-600 dark:text-gray-300 mb-4">
+                        <div class="text-center text-white dark:text-gray-300 mb-4">
                             {{ $card->descricao }}
                         </div>
 
                         <!-- Prazo -->
-                        <div class="text-center text-sm font-medium text-gray-800 dark:text-gray-200 mb-2">
+                        <div class="text-center text-sm font-medium text-white dark:text-gray-200 mb-2">
                             <span class="font-semibold">Prazo:</span> {{ $card->prazo->format('d/m/Y') }}
                         </div>
 
                         <!-- Ciclos -->
-                        <div class="text-center text-sm font-medium text-gray-800 dark:text-gray-200">
-                            <span class="font-semibold">Ciclos:</span> 0/{{ $card->ciclos }}
+                        <div class="text-center text-sm font-medium text-white dark:text-gray-200">
+                            <span class="font-semibold">Ciclos:</span> {{$card->ciclos_completos}}/{{ $card->ciclos }}
                         </div>
                     </div>
                 @endif
@@ -73,7 +73,7 @@
 
                         <!-- Ciclos -->
                         <div class="text-center text-sm font-medium text-gray-800 dark:text-gray-200">
-                            <span class="font-semibold">Ciclos:</span> 0/{{ $card->ciclos }}
+                            <span class="font-semibold">Ciclos:</span> {{$card->ciclos_completos}}/{{ $card->ciclos }}
                         </div>
                     </div>
                 @endif
@@ -113,7 +113,7 @@
 
                         <!-- Ciclos -->
                         <div class="text-center text-sm font-medium text-gray-800 dark:text-gray-200">
-                            <span class="font-semibold">Ciclos:</span> 0/{{ $card->ciclos }}
+                            <span class="font-semibold">Ciclos:</span> {{$card->ciclos_completos}}/{{ $card->ciclos }}
                         </div>
                     </div>
                 @endif
